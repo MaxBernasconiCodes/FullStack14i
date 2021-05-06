@@ -1,0 +1,181 @@
+/* 
+Selectores 
+    Los selectores nos permiten definir a que elementos del  documento vamos a afectar.
+    //////////////////////////////////////////////////////
+    como ejemplo, un selector de una etiqueta <p> seria:
+
+    p { }
+    //////////////////////////////////////////////////////
+
+Declaracion
+    Una o mas declaraciones se le pueden dar a cada selector, es un conjunto de Propiedad-Valor que generan algun cambio en el documento, cada declaracion debe terminar con un punto y coma, ";"
+    //////////////////////////////////////////////////////
+    por ej, si al selector anterior le añadimos declaraciones:
+
+    p
+    {
+        background-color: blue;
+    }
+     la declaracion seria: "background-color:blue"
+    //////////////////////////////////////////////////////
+
+
+Propiedad   y valor
+    Las Propiedades son nuestro objetivo, el "que" que pretendemos alcanzar, es la caracteristica que queremos modificar, y luego de un ":" se delcara el valor que se pretende darle.
+    //////////////////////////////////////////////////////
+    por ej, siguiendo el ejemplo anterior 
+    p
+    {
+        background-color:blue;
+    }
+
+    En este ejemplo, la propiedad es "background-color" y el valor es "blue"
+    //////////////////////////////////////////////////////
+*/
+
+/* TIPOS DE SELECTORES */
+/* Todo: este selector elige todos los elementos del documento */ 
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Tag: Elegimos todos los tags de este tipo */
+html
+{
+background-color: hsla(180, 80%, 20%, 0.5);
+height: 100vh;
+overflow-y: hidden;
+
+}
+
+#div1{
+}
+.meme1 
+{
+}
+
+
+
+body
+{
+    width: 80%;
+    min-width: 500px;
+    margin: auto;
+    border: black solid 10px;
+    border-top: black solid 80px;
+    border-bottom: black solid 100px;
+    border-radius: 50px;
+    height: 100vh;
+    overflow-y: scroll;
+    color: hsla(0, 0%, 100%, 0.8);
+    font-weight:normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:large;
+}
+
+header
+{
+    background-color:  hsla(0, 0, 0, 0.5);
+}
+
+nav
+{
+background-color: hsla(0, 0%, 100%, 0.7);
+}
+/* Seleccionar hijos: 
+    podemos llamar a elementos que se encuentran anidados como hijos de otros separandolos con un espacio por cada nivel
+    Ahora seleccionaremos todos los elementos <a> que se encuentran dentro de los elementos <nav>    
+*/ 
+
+nav a{
+    text-decoration: none;
+}
+
+/*  y aqui todos los elementos <label> dentro de los <nav> */
+nav label{
+    padding: 0 10px;
+    color: hsla(0, 0, 0, 0.9);
+    border-right:hsla(180, 80%, 80%, 1) 2px solid;
+}
+
+main
+{
+background-color: hsla(180, 80%, 20%, 0.1);
+}
+footer
+{
+height: 50px;
+background-color:  hsla(180, 80%, 20%, 0.5);
+border-top: hsla(180, 80%, 80%, 0.5) solid 4px;
+}
+footer a{
+    text-decoration: none;
+    
+}
+footer label{
+    padding: 0 10px;
+    color: hsla(180, 80%, 80%, 1);
+    border-right:hsla(180, 80%, 80%, 1) 2px solid;
+}
+/* Agrupar elementos:
+    Podemos agrupar varios selectores, poniendo una comilla entre ellos. 
+*/
+h1, h2, h3, h4, h5, h6 {
+    margin: 1px 0 0 1px;
+    padding: 0 5px ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h2{
+    border-left: hsl(180, 80%, 20%, 1) solid 6px;
+    margin-bottom: 6px;
+    height: 100%;
+}
+h3, h4, h5, h6
+{
+    border-left: hsl(120, 80%, 20%, 1) solid 6px;
+    margin-bottom: 2px;
+}
+ul
+{
+    padding: 5px 0;
+    background-color: hsl(0, 0%, 0%, 0.1);
+    border-radius: 0 30px 0 0;
+}
+
+li
+{
+ border-bottom: black;
+ list-style: none;
+}
+
+/* Id: con el nombre precedido de un # elegimos el id */
+#parrafo1
+{
+}
+
+#parrafo2
+{
+
+}
+/* clase: presediendo el nombre con un punto , elegimos uan clase*/
+.tag
+{
+color: blue;
+display: inline;
+}
+.tag:hover
+{
+color: yellow;
+font-weight: bolder;
+background-color: black;
+}
+.tag::before
+{
+content: "este antes -";
+}
+.attr
+{
+color: red;
+}

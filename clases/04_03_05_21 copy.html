@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>For</title>
+        <style>
+            html
+            {
+                background-color: cornflowerblue;
+               color: black;
+            }
+            #repaso
+            {
+                background-color: cornflowerblue;
+            }
+            .negrita
+            {
+                font-weight:bolder;
+                border: crimson solid 3px;
+            }
+
+            h1, h2, h3, h4, h5, h6 
+            {
+                margin:0;
+                padding: 0;
+            }
+
+            nav a
+            {
+                text-decoration: none;
+                font-size: 40px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <h1>Clase 4: Formularios - Lunes 03/05/21</h1>
+                <hr>
+                | <a href="#repaso"><label>Repaso</label></a>
+                | <a href="#formularios"><label>Formularios</label></a>
+                | <a href="#ejemplo"><label>Ejemplo Integrador</label></a>
+                | <a href="#tips"><label>Tips Extra</label></a>
+                | <hr/>
+            </nav>
+            | <a href="#tips"><label>Tips Extra</label></a>
+
+        </header>
+        
+        <main>
+            <h2>Repaso cortito:</h2>
+            <section id="repaso">
+            
+            <ul>
+                <li class="negrita" ><h3>HTML:</h3> Lenguaje de marcado, se utilizan etiquetas para decirle al navegador donde debe empezar y donde terminar un elemento. las etiquetas se ponen como &#60etiqueta&#62 (para apertura)  y  &#60etiqueta/&#62 (para cierre) </li>
+                
+                
+                <li ><h3>Etiquetas basicas:</h3> 
+                <ul>
+                    <li class="negrita"><p>&#60!DOCTYPE html&#62 : Marca al navegador el tipo de archivo que usamos </p></li>
+                    <li><p>&#60html&#62 &#60/html&#62 : Inicio y fin del codigo html </p></li>
+                    <li><p>&#60head&#62 &#60/head&#62 : dentro se engloban metadatos </p></li>
+                    <li><p>&#60title&#62 &#60/title&#62 : se enceuntra dentro del head, y representa lo que se lee en la pestaña del navegador </p></li>
+                    <li><p>&#60body&#62 &#60/body&#62 : aqui va todo lo visible de nuestra pagina </p></li>
+                </ul>
+                </li>
+                <li ><h3>Etiquetas semanticas: sin representacion grafica, utiles para SEO</h3> 
+                    <ul>
+                        <li><p>&#60header&#62 &#60/header&#62 : Para los elementos del encabezado </p></li>
+                        <li><p>&#60nav&#62 &#60/nav&#62 : para conjuntos de links que ayuden a navegar el sitio </p></li>
+                        <li><p>&#60main&#62 &#60/main&#62 : Lo principal de nuesta pagina </p></li>
+                        <li><p>&#60footer&#62 &#60/footer&#62 : para nuestro pie de pagina </p></li>
+                        <li><p>&#60section&#62 &#60/section&#62 : todo su contenido está relacionado y forma parte de un mismo significado o elemento </p></li>
+                        <li><p>&#60article&#62 &#60/article&#62 : dentro deben haber contenidos únicos con su propio significado </p></li>
+                        <li><p>&#60aside&#62 &#60/aside&#62: Son datos extra sin lo que podríamos pasar perfectamente pero que hemos decidido añadir en el documento. </p></li>
+                    </ul>
+                </li>
+                <li ><h3>Atributos: </h3> <p>dentro de la etiqueta de apertura, podemos agregar atributos, en algunos casos son madnatorios apra el funcionamiento de la etiqueta. Los atributos se agregan por su nombre, seguidos de un signo "=" y luego entre comillas el valor del atriburo. <br>ej: src="direccion.html"</p> 
+                <li ><h3>Etiquetas de contenido: Se mostraran  como elemntos visibles segun el valor que le demos</h3> 
+                    <ul>
+                        <li><p>&#60h1&#62 &#60/h1&#62 ... &#60h6&#62 &#60/h6&#62 : Encabezados del 1 al 6, se usan tanto semanticamente como contenido que diferencia improtancia de los titulos </p></li>
+                        <li><p>&#60p&#62 &#60/p&#62 : parrafos, texto sin formato </p></li>
+                        <li><p>&#60pre&#62 &#60pre/&#62 : texto preformateado, los cambios que hagamos en los espacios y saltos de linea aplican aqui </p></li>
+                        <li><p>&#60br&#62 : break o salto de linea, para bajar un reglon dejando un espacio </p></li>
+                        <li><p>&#60hr&#62 : linea horizontal, es un salto de linea que ademas dibuja una linea horizontal como corte de pagina </p></li>
+                        <li><p>&#60a&#62 &#60/a&#62 : los elementos dentro de esta etiqueta seran links o hypervinculos hacia la direccion que le indiquemos en el atributo "href"</p></li>
+                        <li><p>&#60img&#62 : etiqueta para insertar imagenes, necesita del atributo "src" con un valor de una direccion donde haya una imagen, como buenas practicas se agrega ademas el atributo "alt" con el valor del texto alternativo </p></li>
+                        <li><p>&#60figure&#62 : es semantica para indicar un agrupado de una imagen con un caption o una descricion </p></li>
+                        <li><p>&#60figcaption&#62 : se utiliza para describir el contenido de una imagen dentro de un figure </p></li>
+                        <li><p>&#60ul&#62 &#60/ul&#62 : Unordered List, lista desordenada, dentro de estos tags, cada uno de los elementos llevara un indicativo de donde comienza un item, sin enumeracion. </p></li>
+                        <li><p>&#60ol&#62 &#60/ol&#62 : Ordered List, igual que la lista desordenada, pero dentro se enumeran los elementos </p></li>
+                        <li><p>&#60li&#62 &#60/li&#62 : el contenido es el de el elemento de una lista </p></li>
+                    </ul>
+                </li>
+                <li ><h3>Estructura basica:</h3> <p>la estructura minima que debe llevar una pagina web (decentemente ordenada)</p>
+                     <pre>
+                        &#60!DOCTYPE html&#62
+                        &#60html&#62
+                         &#60head&#62
+                            &#60title&#62  &#60/title&#62
+                         &#60/head&#62
+                         &#60body&#62
+                            &#60header&#62 &#60/header&#62
+                            &#60main&#62   &#60/main&#62
+                            &#60footer&#62 &#60/footer&#62
+                         &#60/body&#62
+                        &#60/html&#62
+                     </pre>   
+                </li>
+            </ul>
+            
+             
+            <hr>
+            
+                <h2>El tag &#60video&#62 :</h2>
+                <p>Nos permite darle ingresar uno o mas videos dentro en un tag &#60source&#62 <br>Y agregar parametros que determinan comportamientos como:</p>
+                <ul>
+                    <li>width: determina su ancho, ej: width="200px"</li>
+                    <li>height: determina la altura, ej: width="150px"</li>
+                    <li>controls: Agrega los controles de reproduccion</li>
+                    <li>autoplay: hara que (si el navegador lo permite) se autoreproduzca apenas se cargue</li>
+                    <li>loop: hara que se reproduzca nuevamente cada vez que termine</li>
+                    <li>muted: indica que cuando se cargue , debe empezar silenciado</li>
+                    <li>poster: podemos indicar la direccion de una imagen que queramos que aparezca antes de que se reproduzca</li>
+                    <li>src: como en un link , nos permite especificar el origen del video para enlazar</li>
+                </ul>
+                <video width="600" height="315" controls muted poster="../assets/meme1.webp">
+                    <source src="../assets/video1.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    <source src="movie.3gp" type="video/3gp">
+                  No se ah podido cargar ningun video en tu navegador :P
+                </video> 
+
+            </video>
+            
+            <hr>
+            <iframe src="02_26_04_21.html"></iframe>
+            <hr>
+            
+                <h2>Iframe:</h2>
+                <p class="negrita">Son marcos en los que podemos insertar otras apginas o codigo aparte, y que se represente dentro del mismo.</p>
+                <p>por ej, un video traido de Youtube</p>
+                <iframe width="560" height="315" src="https://youtu.be/CX11yw6YL1w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; ; picture-in-picture" allowfullscreen></iframe>            
+            </section>
+            <hr>
+            
+                <h2>Tablas</h2>
+                <p>Las tablas nos permiten mostrar contenido de manera ordenada en filas y columnas con encabezados personalizados (algo asi como una planilla de excel)</p>
+                <p>ej:</p>
+                <table border>
+                    <tr> <!--El primer tr deberiamos usarlo siempre como encabezado en caso de tener datos descriptivos por titulo-->
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                    </tr>
+                    <tr>
+                        <td>Ryan</td>
+                        <td>Reynolds</td>
+                        <td>45</td>
+                    </tr>
+                    <tr>
+                        <td>Wade</td>
+                        <td>Willson</td>
+                        <td>48</td>
+                    </tr>
+                    <tr>
+                        <td>Jackman</td>
+                        <td>Hugh</td>
+                        <td>53</td>
+                    </tr>
+                    <tr>
+                        <td>James</td>
+                        <td>Howlett</td>
+                        <td>??????</td>
+                    </tr>                     
+                </table>
+            
+            <hr>
+            <section id="formularios">
+                <h2>Formularios:</h2>
+                <p>Le permiten al usuario ingresar datos, los cuales podemos procesar</p>
+                <h3>El tag &#60form&#62 &#60/form&#62:</h3>
+                <p>Lo que este dentro de estos tags sera considerado como un grupo de datos, en caso de que tengamos varios &#60form&#62, la apertura y cierre de estos va a determinar que datos son enviados hacia el objetivo</p>
+                
+                <form id="form1" name="form1"  method="GET" target="_blank"  style="border: 1px solid black;">
+                    <label for="nombre">Email</label>
+                    <input id="email" placeholder="email" name="email" type="email" >
+                    <label for="password">Contraseña</label>
+                    <input id="password" placeholder="Contraseña" name="password" type="password">
+                    
+                    <input type="submit">
+                </form>
+                
+                <h3>Los atributos principales:</h3>
+                <p>
+                    <ul>
+                        <li><b>action :</b>dentro de este tag agregaremos la direccion a la que se envian los datos</li>
+                        <li><b>method :</b>existen dos metodos de envio GET y POST, ambos explicados mas adelante. si no se aclara el metodo , por defecto envia como GET.</li>
+                        <li><b>target :</b>el atributo target especifica como se va a abrir el objetivo del formulario, por ej, si es que se abre en la misma ventana o en otra.  </li>
+                        <li><b>id :</b> Como buena practica , es siempre bueno otorgar un id a los formularios, ya que rara vez estos no juegan una parte importante en la pagina cuando los usamos. </li>
+                        <li><b>name :</b> de la misma manera que con el id, el nombre es integrado pro buenas practicas</li>
+                    </ul>
+                </p>
+                <h3>Inputs</h3>
+                <p>
+                    los inputs (en castellano "aporte"), son los campos donde se ingresaran los datos, y hay tantos tipos de inputs, como tipos de datos nos permite recibir el navegador
+                   
+                    <form action="../ejemplos/receptor.php" method="GET" target="_blank">
+                     <input type="submit" value="Enviar">
+                      <ul>
+                              
+                        <li><b>text :</b>por defecto, en caso de que no especifiquemos el el tipo de input, se tomara un input como texto </li>
+                            <input type="text" id="texto" name="texto" maxlength="8" required>
+                        
+                        <li><b>number :</b> nos permite solamente ingresar numeros, es especial para campos en los que no queremos que el usuario ingrese un dato incorrecto sin querer y necesitamos numeros</li>
+                            <input type="number" id="numero" name="numero">
+                        <li><b>password :</b>Al igual que el tipo "text" este envia texto , pero no lo muestra mientras se lo escribe</li>
+                            <input type="password" id="password" maxlength="12" minlength="4" name="password">
+                        <li><b>date :</b>nos permitira desplegar un calendario del cual seleccionar la fecha que queremos enviar</li>
+                            <input type="date" id="date" name="date">
+                        <input type="number" id="dia" name="dia" max="31" min="1">
+                        <input type="number" id="mes" name="mes" max="12" min="1">
+                        <input type="number" id="anio" name="anio" max="2050" min="1950">
+                        <li><b>time :</b> nos permite ingresar un horario, especial para cuando tenemos que acompañar el dato de la fecha</li>                    
+                            <input type="time" id="time" name="time">
+                        <li><b>color :</b> mostrara una paleta de colores de la cual podmos elegir , o ingresar su codigo</li>                    
+                            <input type="color" id="color" name="color">
+                        <li><b>Otros:</b>hay mucha variedad de inputs: <a href="https://www.w3schools.com/html/html_form_input_types.asp">lista completa</a></li>
+                        <hr>
+                        <label for="tilde">Checkbox</label>
+                        <input id="tilde" name="tilde" type="checkbox">
+                        <hr>
+                        <p>Radio</p>
+                        <label for="opcion1">1</label>
+                        <input type="radio" id="opcion1" value="opcion1" name="radio1">
+                        <label for="opcion2">2</label>
+                        <input type="radio" id="opcion2" value="opcion2"name="radio1">
+                        <hr>
+                        <p>Select</p>
+                        <select id="cantidad" name="cantidad">
+                            <option value="1">Usuario</option>
+                            <option value="2">Editor</option>
+                            <option value="3">Admin</option>
+                            <option value="4">Eliminado</option>
+                        </select>
+                        <hr>
+                        <input type="text" list="cars" id="autos" name="autos" />
+                            <datalist id="cars">
+                              <option>Volvo</option>
+                              <option>Saab</option>
+                              <option>Mercedes</option>
+                              <option>Audi</option>
+                            </datalist>
+                        <hr>
+                        <label for="archivo">Archivo</label>
+                        <input id="archivo" hidden name="archivo" type="file" accept=".jpg">
+                        <input type="hidden"><hr>
+                        <label for="hidden1">Hidden</label>
+                        <input type="hidden" value="EsteNoSeVe">
+                        <label for="semana">Semana</label>
+                        <input type="month">
+                    </ul>
+                    </form>
+                    </p>
+            </section>
+            <section id="tips">
+                <p> Multiples Escritorios: apretando la tecla de Windows y Tab podemos manipular mas escritorios para trabajar </p>
+            </section>
+        </main>
+
+        <footer>
+            <table border>
+                <tr>
+                    <td><a href="#repaso"><label>Repaso</label></a></td>
+                    | <a href="#formularios"><label>Formularios</label></a>
+                    <td><a href="#ejemplo"><label>Ejemplo Integrador</label></a></td>
+                    <td><a href="#tips"><label>Tips Extra</label></a></td>
+                </tr>
+            </table>
+        </footer>
+    </body>
+</html>

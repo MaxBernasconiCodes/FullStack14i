@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mi Blog</title>
+        <style>
+            .estilo1{
+                background-color: red;
+                color: royalblue;
+                border: 2px black solid;
+            }
+            .estilo2{
+                background-color: green;
+                color: yellow;
+            }
+            nav{
+                background-color: black;
+
+
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <h1 class="estilo1">Blog Max Bernasconi</h1>
+                <hr>
+                <a href="#diario"><label>Diario |</label></a>
+                <a href="#memes"><label>Memes |</label></a>
+                <a href="#nogatos"><label>Perros |</label></a>
+                <hr/>
+            </nav>
+        </header>
+        <main>
+            <seccion id="memes">
+            <h2>Este es mi diario</h2>
+            
+            <ul><!--unorderd List o Lista desordenada-->
+                <div class="estilo1">
+                <li ><b>Dia 1</b> dando clases: Dimos algo basico, los choiicos se aburrieron</li>
+                <li ><b>Dia 2</b> seguimos iguales, los chiicos no hablan</li>
+                </div>
+                <div class="estilo2">
+                <li> Dia 3: vamos a darles tareas hasta los codos para que no se aburran</li>
+                <li> Dia 4 Sefueron de clase todos los chicos no me bancanm</li>
+                 <ol> <!--Orderd List / Lista Ordenada-->
+                     <li>Hoy <small>Revisamos tarea</small></li>
+                     <li><del>Repasamos</del></li>
+                     <li> Vimos Listas X<sup>2</sup></li>
+                     <li> Vamos a ver iamgenes </li>
+                 </ol>
+                </div>
+            </ul>
+            
+            </seccion> <!-- Secciones de contenido principal de la pagina, 
+                        separadas por tipo de contenido, pero relevante a la tematica-->
+            <seccion id="diario">
+            <h2>Memes</h2>
+            <ul>
+                <li><img src="../../assets/meme1.webp"/></li>
+                <li>
+                    <figure>
+                    <img src="../../assets/meme2.jpg" alt="memepescao" width="250" height="250"/>
+                    <caption> Este es un meme de bob esponja</caption>
+                    </figure>
+                </li>
+                </ul>
+
+            </seccion>
+            <article>
+                <!--Contenido no relevante pero de la tematica de la pagina-->
+            <div>
+                <!--Divisor de contenido no semantico-->
+            </div>
+            </article>
+            <aside>
+                <!--Contenido no necesasrio de la pagina-->
+            </aside>
+            <seccion id="nogatos">
+            <h2>Fotos de Perros</h2>
+            
+            </seccion>
+        </main>
+        <footer>
+            <hr>
+            <a href="#diario"><label>Diario |</label></a>
+            <a href="#memes"><label>Memes |</label></a>
+            <a href="#nogatos"><label>Perros |</label></a>
+        </footer>
+    </body>
+</html>

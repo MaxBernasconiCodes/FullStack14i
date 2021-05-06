@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clase 3: Videos y tablas</title>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <h1>Clase 3: Miercoles 28/04/2021</h1>
+                <hr>
+                | <a href="#repaso"><label>Repaso</label></a>
+                | <a href="#video"><label>Videos</label></a>
+                | <a href="#iframe"><label>iFrames</label></a>
+                | <a href="#tablas"><label>Tablas</label></a>
+                | <a href="#ejemplo"><label>Ejemplo Integrador</label></a>
+                | <a href="#tips"><label>Tips Extra</label></a>
+                | <hr/>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="repaso">
+            <h2>Repaso cortito:</h2>
+            <ul>
+                <li ><h3>HTML:</h3> Lenguaje de marcado, se utilizan etiquetas para decirle al navegador donde debe empezar y donde terminar un elemento. las etiquetas se ponen como &#60etiqueta&#62 (para apertura)  y  &#60etiqueta/&#62 (para cierre) </li>
+                
+                
+                <li ><h3>Etiquetas basicas:</h3> 
+                <ul>
+                    <li><p>&#60!DOCTYPE html&#62 : Marca al navegador el tipo de archivo que usamos </p></li>
+                    <li><p>&#60html&#62 &#60/html&#62 : Inicio y fin del codigo html </p></li>
+                    <li><p>&#60head&#62 &#60/head&#62 : dentro se engloban metadatos </p></li>
+                    <li><p>&#60title&#62 &#60/title&#62 : se enceuntra dentro del head, y representa lo que se lee en la pestaña del navegador </p></li>
+                    <li><p>&#60body&#62 &#60/body&#62 : aqui va todo lo visible de nuestra pagina </p></li>
+                </ul>
+                </li>
+                <li ><h3>Etiquetas semanticas: sin representacion grafica, utiles para SEO</h3> 
+                    <ul>
+                        <li><p>&#60header&#62 &#60/header&#62 : Para los elementos del encabezado </p></li>
+                        <li><p>&#60nav&#62 &#60/nav&#62 : para conjuntos de links que ayuden a navegar el sitio </p></li>
+                        <li><p>&#60main&#62 &#60/main&#62 : Lo principal de nuesta pagina </p></li>
+                        <li><p>&#60footer&#62 &#60/footer&#62 : para nuestro pie de pagina </p></li>
+                        <li><p>&#60section&#62 &#60/section&#62 : todo su contenido está relacionado y forma parte de un mismo significado o elemento </p></li>
+                        <li><p>&#60article&#62 &#60/article&#62 : dentro deben haber contenidos únicos con su propio significado </p></li>
+                        <li><p>&#60aside&#62 &#60/aside&#62: Son datos extra sin lo que podríamos pasar perfectamente pero que hemos decidido añadir en el documento. </p></li>
+                    </ul>
+                </li>
+                <li ><h3>Atributos: </h3> <p>dentro de la etiqueta de apertura, podemos agregar atributos, en algunos casos son madnatorios apra el funcionamiento de la etiqueta. Los atributos se agregan por su nombre, seguidos de un signo "=" y luego entre comillas el valor del atriburo. <br>ej: src="direccion.html"</p> 
+                <li ><h3>Etiquetas de contenido: Se mostraran  como elemntos visibles segun el valor que le demos</h3> 
+                    <ul>
+                        <li><p>&#60h1&#62 &#60/h1&#62 ... &#60h6&#62 &#60/h6&#62 : Encabezados del 1 al 6, se usan tanto semanticamente como contenido que diferencia improtancia de los titulos </p></li>
+                        <li><p>&#60p&#62 &#60/p&#62 : parrafos, texto sin formato </p></li>
+                        <li><p>&#60pre&#62 &#60pre/&#62 : texto preformateado, los cambios que hagamos en los espacios y saltos de linea aplican aqui </p></li>
+                        <li><p>&#60br&#62 : break o salto de linea, para bajar un reglon dejando un espacio </p></li>
+                        <li><p>&#60hr&#62 : linea horizontal, es un salto de linea que ademas dibuja una linea horizontal como corte de pagina </p></li>
+                        <li><p>&#60a&#62 &#60/a&#62 : los elementos dentro de esta etiqueta seran links o hypervinculos hacia la direccion que le indiquemos en el atributo "href"</p></li>
+                        <li><p>&#60img&#62 : etiqueta para insertar imagenes, necesita del atributo "src" con un valor de una direccion donde haya una imagen, como buenas practicas se agrega ademas el atributo "alt" con el valor del texto alternativo </p></li>
+                        <li><p>&#60figure&#62 : es semantica para indicar un agrupado de una imagen con un caption o una descricion </p></li>
+                        <li><p>&#60figcaption&#62 : se utiliza para describir el contenido de una imagen dentro de un figure </p></li>
+                        <li><p>&#60ul&#62 &#60/ul&#62 : Unordered List, lista desordenada, dentro de estos tags, cada uno de los elementos llevara un indicativo de donde comienza un item, sin enumeracion. </p></li>
+                        <li><p>&#60ol&#62 &#60/ol&#62 : Ordered List, igual que la lista desordenada, pero dentro se enumeran los elementos </p></li>
+                        <li><p>&#60li&#62 &#60/li&#62 : el contenido es el de el elemento de una lista </p></li>
+                    </ul>
+                </li>
+                <li ><h3>Estructura basica:</h3> <p>la estructura minima que debe llevar una pagina web (decentemente ordenada)</p>
+                     <pre>
+                        &#60!DOCTYPE html&#62
+                        &#60html&#62
+                         &#60head&#62
+                            &#60title&#62  &#60/title&#62
+                         &#60/head&#62
+                         &#60body&#62
+                            &#60header&#62 &#60/header&#62
+                            &#60main&#62   &#60/main&#62
+                            &#60footer&#62 &#60/footer&#62
+                         &#60/body&#62
+                        &#60/html&#62
+                     </pre>   
+                </li>
+            </ul>
+            
+            </section> 
+            <hr>
+            <section id="video">
+                <h2>El tag &#60video&#62 :</h2>
+                <p>Nos permite darle ingresar uno o mas videos dentro en un tag &#60source&#62 <br>Y agregar parametros que determinan comportamientos como:</p>
+                <ul>
+                    <li>width: determina su ancho, ej: width="200px"</li>
+                    <li>height: determina la altura, ej: width="150px"</li>
+                    <li>controls: Agrega los controles de reproduccion</li>
+                    <li>autoplay: hara que (si el navegador lo permite) se autoreproduzca apenas se cargue</li>
+                    <li>loop: hara que se reproduzca nuevamente cada vez que termine</li>
+                    <li>muted: indica que cuando se cargue , debe empezar silenciado</li>
+                    <li>poster: podemos indicar la direccion de una imagen que queramos que aparezca antes de que se reproduzca</li>
+                    <li>src: como en un link , nos permite especificar el origen del video para enlazar</li>
+                </ul>
+                <video width="600" height="315" controls muted poster="../assets/meme1.webp">
+                    <source src="../assets/video1.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    <source src="movie.3gp" type="video/3gp">
+                  No se ah podido cargar ningun video en tu navegador :P
+                </video> 
+
+            </video>
+            </section>
+            <hr>
+            <iframe src="02_26_04_21.html"></iframe>
+            <hr>
+            <section id="iframe">
+                <h2>Iframe:</h2>
+                <p>Son marcos en los que podemos insertar otras apginas o codigo aparte, y que se represente dentro del mismo.</p>
+                <p>por ej, un video traido de Youtube</p>
+                <iframe width="560" height="315" src="https://youtu.be/CX11yw6YL1w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; ; picture-in-picture" allowfullscreen></iframe>            
+            </section>
+            <hr>
+            <section id="tablas">
+                <h2>Tablas</h2>
+                <p>Las tablas nos permiten mostrar contenido de manera ordenada en filas y columnas con encabezados personalizados (algo asi como una planilla de excel)</p>
+                <p>ej:</p>
+                <table border>
+                    <tr> <!--El primer tr deberiamos usarlo siempre como encabezado en caso de tener datos descriptivos por titulo-->
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                    </tr>
+                    <tr>
+                        <td>Ryan</td>
+                        <td>Reynolds</td>
+                        <td>45</td>
+                    </tr>
+                    <tr>
+                        <td>Wade</td>
+                        <td>Willson</td>
+                        <td>48</td>
+                    </tr>
+                    <tr>
+                        <td>Jackman</td>
+                        <td>Hugh</td>
+                        <td>53</td>
+                    </tr>
+                    <tr>
+                        <td>James</td>
+                        <td>Howlett</td>
+                        <td>??????</td>
+                    </tr>                     
+                </table>
+            </section>
+            <hr>
+            <section id="ejemplo">
+                <h2>Ejemplo Integrador</h2>
+                <table border>
+                    <caption><h2>Videos recomendados (?)</h2></caption>
+                    <tr> <!--El primer tr deberiamos usarlo siempre como encabezado en caso de tener datos descriptivos por titulo-->
+                        <th>Video</th>
+                        <th>Autor</th>
+                        <th>Link</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ROTtrMQaoMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </td>
+                        <td><a href="https://www.youtube.com/channel/UCzUrEhc54gw6idU6bo-tytA"><img src="https://yt3.ggpht.com/ytc/AAUvwnj3-zni5UiyGnRt07S0q7D8KPPhu8OSvMUa2e0Jnw=s48-c-k-c0x00ffffff-no-rj"><p>RapidWebLaunch.com</p></a></td>
+                        <td><a href="https://youtu.be/ROTtrMQaoMc">Web Design Memes Only Web Designers Will Get</a></td>
+                      </tr>
+                      <tr>
+                        <td><iframe width="560" height="315" src="https://www.youtube.com/embed/r7dZKOL5rcg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+                        <td><a href="https://www.youtube.com/channel/UCdtys5fMiaI_NJPeshNzxMQ"><img src="https://yt3.ggpht.com/ytc/AAUvwniTEKE7kpSyaakZHlJxgwTJQaH57NE27nYfn5IvYQ=s48-c-k-c0x00ffffff-no-rj"> <p>Mansoor Codes</p></a></td>
+                        <td><a href="https://www.youtube.com/watch?v=r7dZKOL5rcg"> Proframing Expectations vs Reality</a></td>
+                      </tr>
+                      <tr>
+                          <td><iframe width="560" height="315" src="https://www.youtube.com/embed/WefqSN8dqOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+                          <td><a href="https://www.youtube.com/channel/UCU_W0oE_ock8bWKjALiGs8Q"><img src="https://yt3.ggpht.com/ytc/AAUvwnjg9n-HLoEtku-fRviXvT6IsBSOFBXUjzSc59TQKg=s48-c-k-c0x00ffffff-no-rj"><p>Charisma on Command</p></a></td>
+                          <td><a href="https://www.youtube.com/watch?v=WefqSN8dqOU">How To Be Sarcastic WITHOUT Being A Jerk</a></td>
+                        </tr>
+                </table>
+            </section>
+            <section>
+                <p> Seleccion de multiples lineas para editar con: <br> Ctrl + ALT + Shift</p>
+            </section>
+        </main>
+
+        <footer>
+            <table border>
+                <tr>
+                    <td><a href="#repaso"><label>Repaso</label></a></td>
+                    <td><a href="#videos"><label>Videos</label></a></td>
+                    <td><a href="#iframes"><label>iFrames</label></a></td>
+                    <td><a href="#tablas"><label>Tablas</label></a></td>
+                    <td><a href="#ejemplo"><label>Ejemplo Integrador</label></a></td>
+                    <td><a href="#tips"><label>Tips Extra</label></a></td>
+                </tr>
+            </table>
+        </footer>
+    </body>
+</html>
