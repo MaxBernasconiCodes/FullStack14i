@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: blanchedalmond;
+}
+html
+{
+    height: 100vh;
+    background-image: url('bg.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size:cover;
+    font-size: 10px;
+}
+body
+{
+    min-width: 500px;
+    width: 1500;
+}
+
+header{
+height: 10vh;
+border-bottom: black 2px solid;
+background-color: hsla(0, 0%, 0%, 0.5);
+}
+
+
+header h2
+{
+    background-color: hsla(240, 100%, 50%, 0.5);
+}
+nav a{
+    font-size: 2rem;
+}
+
+nav a:active {
+    color: yellow;
+    background-color: blue;
+    display: none;
+}
+header a::before{
+    content: " | ";
+}
+
+main
+{
+    height: 80vh;
+    width:100%;
+}
+
+footer{
+height: 10vh;
+background-color: black;
+}
+
+.arriba{
+    width: 10rem;
+}
+
+.iconos{
+    font-size: 50px;
+}
