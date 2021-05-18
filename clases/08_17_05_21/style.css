@@ -1,5 +1,6 @@
                 :root{
     --fondo-principal:linear-gradient(to right, hsla(0, 100%, 50%, 1), #000000 50%, #f6f6f6 100%);
+    --fondo-claro:linear-gradient(to right, hsla(0, 100%, 50%, 1), #ffb3b3 50%, #f6f6f6 100%);
 }
 
 *{
@@ -138,6 +139,9 @@ footer{
 .footer p{
     font-size: 1.6rem;
 }
+
+
+
 /*-------BreakPoints-------*/
 
  @media only screen and (max-width:1200px){
@@ -148,5 +152,4 @@ footer{
     main{
             padding: 5%;
         } 
-
  }
